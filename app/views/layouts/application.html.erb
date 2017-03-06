@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>New Beginnings</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class = "landing">
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+
+	<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; New Beginnings Assembly of God. All rights reserved.</li><li>Design: <a href="www.fruitblock.com/shanerybka/">Shane Rybka</a></li>
+			</ul>
+		</footer>
+  </body>
 </html>
