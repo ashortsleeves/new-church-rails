@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'ckeditor'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
