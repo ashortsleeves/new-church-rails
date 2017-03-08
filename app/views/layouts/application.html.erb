@@ -14,6 +14,13 @@
 					<h1 id="logo"><a href="index.html">New Beginnings Assembly of God</a></h1>
 					<nav id="nav">
 						<ul>
+						  <li>
+						  <% if user_signed_in? %>
+						    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+						  <% else %>
+						    <%= link_to('Login', new_user_session_path) %>
+						  <% end %>
+						  </li>
 							<li>
 								<a href="#">About</a>
 								<ul>
