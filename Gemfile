@@ -52,3 +52,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'devise'
+
+gem 'cancancan', '~> 1.10'
