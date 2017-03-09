@@ -10,7 +10,7 @@
     <strong>Body:</strong>
     <%= raw @post.body %>
   </p>
-  
-  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <% if signed_in? && current_user.admin? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> <% end %>|
   <%= link_to 'Back', posts_path %>
 </div>
