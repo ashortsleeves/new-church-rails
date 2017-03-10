@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.post-container {
+    margin-top: 70px;
+}
+
+.post-container > form > .field {
+    max-width: 300px;
+}
+
 .page-wrapper {
     height: auto;
     min-height: 100%;
@@ -16,9 +24,7 @@
     margin-bottom: 30px;
 }
 
-#posts-new h1, label {
-    color: black;
-}
+
 
 #post_title {
     border: solid 1px black;
