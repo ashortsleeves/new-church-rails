@@ -22,16 +22,7 @@
 			
 					<nav id="nav">
 						<ul>
-						  <li>
-						  	<% if current_page?(posts_path) %>
-								  <% if user_signed_in? %>
-								    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-								  <% else %>
-								    <%= link_to('Login', new_user_session_path) %>
-								  <% end %>
-								<% end %>
-						  </li>
-						  <li><%= link_to('Blog', posts_path) %></li>
+
 							<li>
 								<a href="#">About</a>
 								<ul>
@@ -63,7 +54,7 @@
 								<a href="#">Events</a>
 								<ul>
 									<li><a href="left-sidebar.html">Calendar</a></li>
-									<li><a href="right-sidebar.html">Blog</a></li>
+									<li><%= link_to('Blog', posts_path) %></li>
 								</ul>
 							</li>
 							<li><a href="elements.html">Preschool</a></li>
@@ -88,6 +79,15 @@
 			</ul>
 			<ul class="copyright">
 				<li>&copy; New Beginnings Assembly of God. All rights reserved.</li><li>Design: <a href="www.fruitblock.com/shanerybka/">Shane Rybka</a></li>
+				<li>
+			  	<% if current_page?(posts_path) %>
+					  <% if user_signed_in? %>
+					    <%= link_to('Admin Logout', destroy_user_session_path, :method => :delete) %>
+					  <% else %>
+					    <%= link_to('Admin Login', new_user_session_path) %>
+					  <% end %>
+					<% end %>
+			  </li>
 			</ul>
 		</footer>
 				</div><!--/page wrapper-->
