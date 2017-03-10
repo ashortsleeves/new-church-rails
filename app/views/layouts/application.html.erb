@@ -17,7 +17,9 @@
 
 			<!-- Header -->
 				<header id="header">
-					<%= image_tag "NB.jpg", :id => "brand-img" %><!--static_pages.css-->
+					
+						<%= link_to image_tag("NB.jpg"), static_pages_index_path, :id => "brand-img" %><!--static_pages.css-->
+			
 					<nav id="nav">
 						<ul>
 						  <li>
