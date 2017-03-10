@@ -1,12 +1,9 @@
-<div class="container" id="posts-page">
-  <p id="notice"><%= notice %></p>
+<div class="container post-container" id="posts-page">
+  <% if signed_in? && current_user.admin? %>  
+    <%= link_to 'New Post', new_post_path, :class =>"btn btn-lg btn-primary", :id =>"new-post" %>
+  <% end %>
   
   <div class="row">
-    <% if signed_in? && current_user.admin? %>  
-      <div class="col-md-12 blog-post">
-        <%= link_to 'New Post', new_post_path, :class =>"btn btn-lg btn-primary" %>
-      </div>
-    <% end %>
     <% @posts.each do |post| %>
       <div class="col-md-12 blog-post">
         <h2><%= post.title %></h2>

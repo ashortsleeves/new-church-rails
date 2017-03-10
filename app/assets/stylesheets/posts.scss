@@ -31,3 +31,14 @@
     color: #eee;
 }
 
+
+#alert, #notice, #new-post {
+    position: fixed;
+    right: 20px;
+    top: 120px;
+    z-index: 99999;
+}
+
+#new-post {
+    top: 60px;
+}
