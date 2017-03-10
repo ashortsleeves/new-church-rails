@@ -1,5 +1,9 @@
+
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+
+
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -1547,6 +1551,16 @@
 		background: #1c1d26;
 	}
 
+    video#bgVideo {
+	   left: 0;
+	   top: 0;
+	   width: auto;
+	   min-width: 100%;
+	   height: auto;
+	   min-height: 100%;
+	   z-index: 999;    
+    }   
+
 	body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 		-moz-animation: none !important;
 		-webkit-animation: none !important;
@@ -1579,6 +1593,7 @@
 		a:hover {
 			color: #e44c65 !important;
 			border-bottom-color: transparent;
+			background-color: transparent;
 		}
 
 	strong, b {
@@ -2008,6 +2023,7 @@
 
 	body.landing {
 		text-decoration: none;
+		background-color: #1c1d26;
 	}
 
 		body.landing:before {
@@ -2121,7 +2137,7 @@
 
 	header.major {
 		margin: 0 0 4em 0;
-		position: fixed;
+		position: relative;
 		text-align: center;
 	}
 
@@ -2437,6 +2453,15 @@
 				}
 
 /* Image */
+    
+.handsvideo {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+}
 
 	.image {
 		border-radius: 4px;
@@ -3307,9 +3332,14 @@
 						color: #e44c65;
 					}
 
+                    #subnav:hover {
+                        background: rgba(27,28,36, 0.965);
+                    }
+
 					#header nav ul li > ul {
 						display: none;
 					}
+
 
 	body.landing #page-wrapper {
 		padding-top: 0;
