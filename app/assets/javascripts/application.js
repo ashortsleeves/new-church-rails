@@ -12,6 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require nicescroll
+//= require scrollbar
+//= require scrolly
+//= require dropotron
+//= require scrollex
+//= require skel
+//= require util
 //= require turbolinks
-//= require_tree .
 //= require ckeditor/init
+//= require main.js
+//= require posts.js
