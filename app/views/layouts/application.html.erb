@@ -17,16 +17,19 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.html">New Beginnings Assembly of God</a></h1>
+					<%= image_tag "NB.jpg", :id => "brand-img" %><!--static_pages.css-->
 					<nav id="nav">
 						<ul>
 						  <li>
-						  <% if user_signed_in? %>
-						    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-						  <% else %>
-						    <%= link_to('Login', new_user_session_path) %>
-						  <% end %>
+						  	<% if current_page?(posts_path) %>
+								  <% if user_signed_in? %>
+								    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+								  <% else %>
+								    <%= link_to('Login', new_user_session_path) %>
+								  <% end %>
+								<% end %>
 						  </li>
+						  <li><%= link_to('Blog', posts_path) %></li>
 							<li>
 								<a href="#">About</a>
 								<ul>
