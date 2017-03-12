@@ -12,7 +12,7 @@
 
 			<!-- One -->
 				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><%= video_tag("hands.mp4", id: "bgVideo", :preload => true, :autoplay => true, :loop => true) %></span>
+					<%= video_tag("hands.mp4", id: "bgVideo", :autobuffer => true, :autoplay => true, :loop => true) %>
 					
 					<div class="content">
 						<div class="container">

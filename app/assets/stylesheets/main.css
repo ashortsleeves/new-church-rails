@@ -1555,15 +1555,14 @@
 	}
 
     video#bgVideo {
-	       content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url(images/overlay.png);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+	   left: 0;
+	   top: 0;
+	   width: auto;
+	   min-width: 100%;
+	   height: auto;
+	   min-height: 100%;
+	   z-index: 999;
+	   display: block;
     }   
 
 	body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -2876,6 +2875,7 @@
 		height: 100vh;
 		overflow: hidden;
 		position: relative;
+		
 	}
 
 		.spotlight:nth-last-of-type(1) {
@@ -2968,9 +2968,7 @@
 			width: 100%;
 		}
 
-		.spotlight .image.main {
-			display: none;
-		}
+		
 
 			.spotlight .image.main img {
 				position: relative;
@@ -3275,8 +3273,8 @@
 		top: 0;
 		width: auto;
 		min-width: 100%;
-		height: auto;
-		min-height: 100%;
+		height: 100%;
+		min-height: 100vh;
 		z-index: 100;
 	}
 
