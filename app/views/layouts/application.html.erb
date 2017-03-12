@@ -11,14 +11,14 @@
     <%= csrf_meta_tags %>
   </head>
   
+	<body class = "landing is-touch">
 
-  <body class = "landing is-touch">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
 					
-						<%= link_to image_tag("NB.jpg"), static_pages_index_path, :id => "brand-img" %><!--static_pages.css-->
+						<%= link_to image_tag("NB.jpg"), root_path, :id => "brand-img" %><!--static_pages.css-->
 			
 					<nav id="nav">
 						<ul>
@@ -26,35 +26,35 @@
 							<li>
 								<a href="#">About</a>
 								<ul>
-									<li><a href="left-sidebar.html">Staff</a></li>
-									<li><a href="right-sidebar.html">Leaders</a></li>
-									<li><a href="no-sidebar.html">History</a></li>
-                  <li><a href="no-sidebar.html">Beliefs</a></li>
-                  <li><a href="no-sidebar.html">Bulletin</a></li>
+									<li id="subnav"><a href="#">Staff</a></li>
+									<li id="subnav"><a href="#">Leaders</a></li>
+									<li id="subnav"><a href="#">History</a></li>
+                  <li id="subnav"><a href="#">Beliefs</a></li>
+                  <li id="subnav"><a href="#">Bulletin</a></li>
 								</ul>
 							</li>
 							<li>
 								<a href="#">Connect</a>
 								<ul>
-									<li><a href="left-sidebar.html">Contact</a></li>
-									<li><a href="right-sidebar.html">Prayers</a></li>
+									<li id="subnav"><a href="#">Contact</a></li>
+									<li id="subnav"><a href="#">Prayers</a></li>
 								</ul>
 							</li>
               <li>
 								<a href="#">Ministries</a>
 								<ul>
-									<li><a href="no-sidebar.html">Women's Ministries</a></li>
-                  <li><a href="no-sidebar.html">Men's Ministries</a></li>
-                  <li><a href="no-sidebar.html">Young Adult Ministries</a></li>
-                  <li><a href="no-sidebar.html">Youth Ministries</a></li>
-                  <li><a href="no-sidebar.html">Children's Ministries</a></li>
+									<li id="subnav"><a href="#">Women's Ministries</a></li>
+                  <li id="subnav"><a href="#">Men's Ministries</a></li>
+                  <li id="subnav"><a href="#">Young Adult Ministries</a></li>
+                  <li id="subnav"><a href="#">Youth Ministries</a></li>
+                  <li id="subnav"><a href="#">Children's Ministries</a></li>
 								</ul>
 							</li>
                 <li>
 								<a href="#">Events</a>
 								<ul>
-									<li><a href="left-sidebar.html">Calendar</a></li>
-									<li><%= link_to('Blog', posts_path) %></li>
+									<li id="subnav"><a href="#">Calendar</a></li>
+									<li id="subnav"><%= link_to('Blog', posts_path) %></li>
 								</ul>
 							</li>
 							<li><a href="elements.html">Preschool</a></li>

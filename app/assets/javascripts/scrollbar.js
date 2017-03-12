@@ -6,5 +6,5 @@ $("html").niceScroll({
     cursorborder: "black",
     horizrailenabled: false,
     mousescrollstep: 20,
-    zindex: 999999,
+    zindex: 9999,
 });
