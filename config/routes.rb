@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subscribers/index'
+
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { registrations: 'registrations' }
   
   resources :users do
@@ -7,12 +9,14 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   get 'static_pages/index'
-
+  
+  resources :subscribers
+  root 'subscribers#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'static_pages#index'
+  # root 'static_pages#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
