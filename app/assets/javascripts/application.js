@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require turbolinks
+
 //= require jquery_ujs
 //= require nicescroll
 //= require scrollbar
@@ -20,7 +20,6 @@
 //= require scrollex
 //= require skel
 //= require util
-
 //= require ckeditor/init
 //= require main.js
 //= require posts.js

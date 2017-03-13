@@ -15,7 +15,7 @@
 }
 
 .post-container > form > .field {
-    max-width: 300px;
+    max-width: auto;
 }
 
 .page-wrapper {
@@ -24,19 +24,24 @@
     
 }
 
-#posts-page h1, h2 {
-    color: #fff;
+#posts-page h1, #posts-page h2 {
+    color: #20292f;
 }
 
 .blog-post {
-    margin-bottom: 30px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    margin: 2%;
 }
 
-
+#posts-page p {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 #post_title {
     border: solid 1px black;
-    color: #eee;
+    color: #71818c;
 }
 
 
@@ -57,4 +62,15 @@
 
 .logout {
     background-color: #d9534f;
+}
+
+#posts-page {
+    background: #DEE0E1;
+    padding: none;
+    margin: 0;
+    color: #20292f;
+}
+
+.paginate {
+    text-align: center;
 }
