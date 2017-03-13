@@ -1,3 +1,3 @@
 class Subscriber < ActiveRecord::Base
-    validates :name, :email, presence: true
+    validates :email, presence: true
 end
