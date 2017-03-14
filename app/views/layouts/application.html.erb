@@ -24,7 +24,7 @@
 						<ul>
 
 							<li>
-								<% link_to('Home',root_path) %>
+								
 								<a href="#">About</a>
 								<ul>
 									<li id="subnav"><a href="#">Staff</a></li>
@@ -60,6 +60,12 @@
 							</li>
 							<li><a href="elements.html">Preschool</a></li>
 							<li><a href="#" class="button special">Give <i class="fa fa-heart" aria-hidden="true"></i></a></li>
+							<% if current_page?(posts_path) %>
+					  		<% if user_signed_in? %>
+					    		<%= link_to 'New Post', new_post_path, :class => "button special new-post mobilesignin" %>
+    							<%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "button special logoutbutton mobilesignin" %>
+					  		<% end %>
+							<% end %>
 						</ul>
 					</nav>
 				</header>

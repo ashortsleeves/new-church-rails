@@ -11,16 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="field" style="p: color: white;">
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label :body %>
     <%= f.cktext_area :body %>
   </div>
   <div class="actions">
-    <%= f.submit :class => "btn btn-lg btn-primary" %>
+    <%= f.submit :class => "button special formbutton" %>
+    <%= link_to 'Cancel', posts_path,
+            data: { confirm: 'Your changes will not be saved!'},
+            :class => "button special cancelbutton" %>
   </div>
 
 <% end %>

@@ -5,5 +5,6 @@ Things still left to do:
 3. paginate posts
 
 
-NOTE TO ADAM:
-I removed Turbolinks, it fixed the problem with the nav not working after returning to the main page.
+
+change "    self.per_page = 3" to whatever in app/models/post.rb
+change " @posts = Post.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")" to whatever in app/controllers/post_controller.rb

@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-
-//= require jquery_ujs
 //= require nicescroll
+//= require jquery_ujs
+
 //= require scrollbar
 //= require scrolly
 //= require dropotron

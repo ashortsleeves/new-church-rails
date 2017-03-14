@@ -1,0 +1,17 @@
+<div class="container post-container" id="post-show">
+  <p id="notice"><%= notice %></p>
+  
+
+    <h2><%= @post.title %></h2>
+<%= @post.user.user_name %>
+  
+  <p><%= raw @post.body %></p>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-xs btn-warning" %>
+    <%= link_to 'Delete', @post, 
+            method: :delete, 
+            data: { confirm: 'Are you sure?'},
+            :class => "btn btn-xs btn-danger"  %>
+  <% end %>
+  <%= link_to 'Back', posts_path, :class => "btn btn-xs btn-success" %>
+</div>

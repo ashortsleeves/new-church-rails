@@ -1,23 +1,24 @@
 <div class="container post-container" id="posts-page">
-  <% if signed_in? && current_user.admin? %>  
-    <%= link_to 'New Post', new_post_path, :class =>"btn btn-lg btn-primary", :id =>"new-post" %>
-  <% end %>
+  
   
   <div class="row">
     <% @posts.each do |post| %>
       <div class="col-md-6 col-sm-6 col-xs-6 blog-post">
-        <h2><%= post.title %></h2>
-        <p>Posted <%= "#{time_ago_in_words(post.created_at)} ago" %> by <%= post.user.user_name %></p>
-        <p> <%= raw post.body %></p>
-        <% if signed_in? && current_user.admin? %>  
-          <%= link_to 'Edit', edit_post_path(post),
-            :class => "btn btn-xs btn-warning" %> 
-          <%= link_to 'Delete', post, 
-            method: :delete, 
-            data: { confirm: 'Are you sure?'},
-            :class => "btn btn-xs btn-danger"  %>
+        <div class="col-md-12 post-guts">
+        <h1><%= post.title %></h1>
+        <h2>Posted <%= "#{time_ago_in_words(post.created_at)} ago" %><br> By <%= post.user.user_name %></h2>
+        <%= image_tag "church-man-sea.jpg", :class => "postimage" %>
+        <p> <%= raw post.body[0,225] %>...</p>
+        <%= link_to 'Read More', post, :class => "button special linkbutton" %>
+        <br>
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to 'Edit', edit_post_path(post), :class => "button special editbutton" %>
+          <%= link_to 'Delete', post,
+            method: :delete,
+            data: { confirm: 'Are you sure? This cannot be undone.'},
+            :class => "button special deletebutton" %>
         <% end %>
-        <%= link_to 'Read More', post, :class => "btn btn-xs btn-success" %>
+        </div>
       </div>
     <% end %>
 
@@ -27,8 +28,7 @@
 
 
   </div>
-
+    <div class="pagenumbers">
       <%= will_paginate @posts %>  
-
-
+    </div>
 </div>

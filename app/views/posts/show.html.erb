@@ -1,17 +1,21 @@
-<div class="container post-container" id="post-show">
+<div class="container post-container" id="posts-show">
   <p id="notice"><%= notice %></p>
   
 
-    <h2><%= @post.title %></h2>
-<%= @post.user.user_name %>
+    <h1><%= @post.title %></h1>
+<h2><%= @post.user.user_name %></h2>
   
   <p><%= raw @post.body %></p>
+  
+  <%= link_to 'Back', posts_path,
+            :class => "button special backbutton" %>
+  <%= link_to 'Share', "#", :class => "button special sharebutton" %>
+  <br>
   <% if signed_in? && current_user.admin? %>
-    <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-xs btn-warning" %>
-    <%= link_to 'Delete', @post, 
-            method: :delete, 
-            data: { confirm: 'Are you sure?'},
-            :class => "btn btn-xs btn-danger"  %>
-  <% end %>
-  <%= link_to 'Back', posts_path, :class => "btn btn-xs btn-success" %>
+          <%= link_to 'Edit', @post, :class => "button special editbuttonpost" %>
+          <%= link_to 'Delete', @post,
+            method: :delete,
+            data: { confirm: 'Are you sure? This cannot be undone.'},
+            :class => "button special deletebutton" %>
+        <% end %>
 </div>

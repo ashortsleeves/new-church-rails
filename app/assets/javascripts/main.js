@@ -56,7 +56,7 @@
 				$(
 					'<div id="titleBar">' +
 						'<a href="#navPanel" class="toggle"></a>' +
-						'<span class="title">' + "New Beginnings Assembly of God" + '</span>' +
+						'<span class="title">' + 'New Beginnings Assembly of God' + '</span>' +
 					'</div>'
 				)
 					.appendTo($body);
