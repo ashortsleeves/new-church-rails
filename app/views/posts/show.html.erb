@@ -12,8 +12,8 @@
   <%= link_to 'Share', "#", :class => "button special sharebutton" %>
   <br>
   <% if signed_in? && current_user.admin? %>
-          <%= link_to 'Edit', @post, :class => "button special editbuttonpost" %>
-          <%= link_to 'Delete', @post,
+          <%= link_to 'Edit', edit_post_path, :class => "button special editbuttonpost" %>
+          <%= link_to 'Delete', post_path,
             method: :delete,
             data: { confirm: 'Are you sure? This cannot be undone.'},
             :class => "button special deletebutton" %>
