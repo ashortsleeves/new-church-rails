@@ -66,3 +66,5 @@ gem "font-awesome-rails"
 gem 'will_paginate', '~> 3.1.0'
 
 gem "browser", require: "browser/browser"
+
+gem 'rails_12factor', group: :production
