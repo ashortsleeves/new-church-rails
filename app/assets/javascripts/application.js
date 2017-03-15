@@ -13,7 +13,6 @@
 //= require jquery
 //= require nicescroll
 //= require jquery_ujs
-
 //= require scrollbar
 //= require scrolly
 //= require dropotron

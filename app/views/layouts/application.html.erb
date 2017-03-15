@@ -6,7 +6,7 @@
     <%= stylesheet_link_tag :all %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  
+ 
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <%= csrf_meta_tags %>
@@ -22,7 +22,11 @@
 			
 					<nav id="nav">
 						<ul>
-
+							<% unless current_page?(root_path) %>
+								<li class="homebutton">
+									<%= link_to('Home', root_path) %>
+								</li>
+							<% end %>
 							<li>
 								
 								<a href="#">About</a>
@@ -37,7 +41,7 @@
 							<li>
 								<a href="#">Connect</a>
 								<ul>
-									<li id="subnav"><a href="#">Contact</a></li>
+									<li id="subnav"><%= link_to('Contact', static_pages_contact_path) %></li>
 									<li id="subnav"><a href="#">Prayers</a></li>
 								</ul>
 							</li>
@@ -60,12 +64,13 @@
 							</li>
 							<li><a href="elements.html">Preschool</a></li>
 							<li><a href="#" class="button special">Give <i class="fa fa-heart" aria-hidden="true"></i></a></li>
-							<% if current_page?(posts_path) %>
-					  		<% if user_signed_in? %>
-					    		<%= link_to 'New Post', new_post_path, :class => "button special new-post mobilesignin" %>
-    							<%= link_to 'Logout', destroy_user_session_path, :method => :delete, :class => "button special logoutbutton mobilesignin" %>
+							<li class="mobilesignin">
+					  		<% if signed_in? && current_user.admin? %>
+					  		<li>|</li>
+					  			<%= link_to('New Post', new_post_path, :class => "button special new-post") %>
+					  			<%= link_to('Logout', static_pages_logout_path, :class => "button special logoutbutton") %>
 					  		<% end %>
-							<% end %>
+							</li>
 						</ul>
 					</nav>
 				</header>
@@ -79,17 +84,17 @@
 	<!-- Footer -->
 		<footer id="footer">
 			<ul class="icons">
-				<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="#" class="icon fa-twitter" id="twitter_footer"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/NewBeginningsTiffin/" class="icon fa-facebook" id="facebook_footer"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram" id="instagram_footer"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-envelope" id="email_footer"><span class="label">Email</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>&copy; New Beginnings Assembly of God. All rights reserved.</li><li>Design: <a href="http://www.fruitblock.com/shanerybka/">Shane Rybka</a></li><li>Backend Development: <a href="http://www.adamshortsleeves.com/">ShortSleeve WebDev</a></li>
 				<li>
 			  	<% if current_page?(posts_path) %>
-					  <% if user_signed_in? %>
-					    <%= link_to('Admin Logout', destroy_user_session_path, :method => :delete) %>
+					  <% if signed_in? %>
+					    <%= link_to('Admin Logout', destroy_user_session_path, :method => :delete) %> 
 					  <% else %>
 					    <%= link_to('Admin Login', new_user_session_path) %>
 					  <% end %>

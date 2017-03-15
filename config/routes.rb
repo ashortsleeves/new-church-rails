@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
   get 'static_pages/index'
-  
+  get 'static_pages/contact'
+  get 'static_pages/logout'
   resources :subscribers
+  resources :delete
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
