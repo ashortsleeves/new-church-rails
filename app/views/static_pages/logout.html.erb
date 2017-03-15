@@ -1,0 +1,30 @@
+ <div class="logoutpage">
+ <h1>You have been logged out!</h1>
+ <script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var end =setInterval(function () {
+            seconds = parseInt(timer % 60, 10);
+
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = seconds;
+
+            if (--timer < 0) {
+                window.location = "/posts";
+                clearInterval(end);
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var fiveMinutes = 5,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
+</script>
+<p>Redirecting to Blog page in <span id="time">05</span></p>
+<form id="form1" runat="server">
+
+</form>
+</div>

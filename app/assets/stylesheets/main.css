@@ -2386,6 +2386,23 @@
 		border-bottom: none;
 		position: relative;
 	}
+	
+	.icon:hover {
+		text-decoration: none !important;
+	}
+	
+	#twitter_footer:hover {
+		color: #00aced !important;
+	}
+	#facebook_footer:hover {
+		color: #3b5998 !important;
+	}
+	#instagram_footer:hover {
+		color: #bc2a8d !important;
+	}
+	#email_footer:hover {
+		color: #007bb6 !important;
+	}
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2429,6 +2446,10 @@
 			text-align: center;
 			width: 6em;
 		}
+
+.contactpage {
+	margin: 5% 10%;
+}
 
 			.icon.major:before {
 				font-size: 2.25em;
@@ -4026,4 +4047,16 @@
 	display: none;
 }
 
+}
+
+.mobilesignin {
+	display: inline-block;
+}
+
+.logoutpage {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	width: 100%;
+	height: auto;
+	text-align: center;
 }
