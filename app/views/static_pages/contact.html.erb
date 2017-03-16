@@ -1,39 +1,61 @@
 <section class="contactpage">
-								<h3>Form</h3>
-								<form method="post" action="#">
-									<div class="row uniform 50%">
-										<div class="6u 12u$(xsmall)">
-											<input type="text" name="name" id="name" value="" placeholder="Name" />
-										</div>
-										<div class="6u$ 12u$(xsmall)">
-											<input type="email" name="email" id="email" value="" placeholder="Email" />
-										</div>
-										<div class="12u$">
-											<div class="select-wrapper">
-												<select name="category" id="category">
-													<option value="">- Category -</option>
-													<option value="1">Contact</option>
-													<option value="1">Prayer Request</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="6u 12u$(medium)">
-											<input type="checkbox" id="copy" name="copy">
-											<label for="copy">Email me a copy of this message</label>
-										</div>
-										<div class="12u$">
-											<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<div class="12u$">
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="special" /></li>
-												<li><input type="reset" value="Reset" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
+<!-- 	<h3>Form</h3>
+	<form method="post" action="#">
+		<div class="row uniform 50%">
+			<div class="6u 12u$(xsmall)">
+				<input type="text" name="name" id="name" value="" placeholder="Name" />
+			</div>
+			<div class="6u$ 12u$(xsmall)">
+				<input type="email" name="email" id="email" value="" placeholder="Email" />
+			</div>
+			<div class="12u$">
+				<div class="select-wrapper">
+					<select name="category" id="category">
+						<option value="">- Category -</option>
+						<option value="1">Contact</option>
+						<option value="1">Prayer Request</option>
+						<option value="1">Human Resources</option>
+					</select>
+				</div>
+			</div>
+			<div class="6u 12u$(medium)">
+				<input type="checkbox" id="copy" name="copy">
+				<label for="copy">Email me a copy of this message</label>
+			</div>
+			<div class="12u$">
+				<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+			</div>
+			<div class="12u$">
+				<ul class="actions">
+					<li><input type="submit" value="Send Message" class="special" /></li>
+					<li><input type="reset" value="Reset" /></li>
+				</ul>
+			</div>
+		</div>
+	</form> -->
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= label_tag :name %>
+      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address" %>
+      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+    </div>
+    <div class="form-group">
+      <%= label_tag :message %>
+      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </div>      
+  </div>
+</div>
+<%= submit_tag "Send" %>   
+<% end %>
+	
+</section>
 
 
 
