@@ -65,8 +65,9 @@
 				$(
 					'<div id="navPanel">' +
 						'<nav>' +
-							$('#nav').navList() +
+							$('nav > ul :not(.mobilesignin) ').navList() +
 						'</nav>' +
+						
 					'</div>'
 				)
 					.appendTo($body)
@@ -80,6 +81,7 @@
 						target: $body,
 						visibleClass: 'navPanel-visible'
 					});
+					$('#mobilesignin').appendTo( $('nav') );
 
 			// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)

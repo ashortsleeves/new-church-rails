@@ -220,6 +220,13 @@
     padding: 0 1.25em;
 }
 
+@media screen and (max-width: 911px) {
+    .logoutbutton {
+        display: none;
+    }
+}
+
+
 .login {
     background-color: #449d44;
 }
@@ -351,9 +358,7 @@
     
 }
 
-.logoutbutton {
-    display: none;
-}
+
 
 .new-post {
     display: none !important;
