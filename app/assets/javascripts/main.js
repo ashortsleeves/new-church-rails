@@ -67,7 +67,6 @@
 						'<nav>' +
 							$('nav > ul :not(.mobilesignin) ').navList() +
 						'</nav>' +
-						
 					'</div>'
 				)
 					.appendTo($body)
