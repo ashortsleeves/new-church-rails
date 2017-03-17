@@ -20,6 +20,6 @@
 //= require scrollex
 //= require skel
 //= require util
-//= require ckeditor/init
+
 //= require main.js
 //= require posts.js

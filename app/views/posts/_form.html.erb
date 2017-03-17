@@ -1,4 +1,5 @@
 <%= form_for(@post) do |f| %>
+ <%= javascript_include_tag Ckeditor.cdn_url %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
