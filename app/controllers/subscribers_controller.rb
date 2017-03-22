@@ -7,7 +7,7 @@ class SubscribersController < ApplicationController
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
       cookies[:saved_lead] = true
-      UserNotifier.send_signup_email(@subscriber).deliver
+      UserNotifier.send_signup_email(@subscriber).deliver_later
       redirect_to root_path, notice: "Saved Successfully!"
     else
       redirect_to root_path, notice: "Failed to save"
