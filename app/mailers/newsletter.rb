@@ -5,6 +5,6 @@ class Newsletter < ActionMailer::Base
     # these are instance variables for newsletter view
     @post = post
     @subscriber = subscriber
-    mail(:to => subscriber.email, :subject => post.title)
+    mail(:to => @subscriber.email, :subject => @post.title)
   end
 end
