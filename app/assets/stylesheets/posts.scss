@@ -220,6 +220,22 @@
     padding: 0 1.25em;
 }
 
+.preschoolbutton {
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1.25em;
+    background-color: #5bc0de !important;
+    box-shadow: none;
+    color: #ffffff !important;
+    display: inline-block;
+}
+
+.preschoolbutton:hover {
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1.25em;
+}
+
 @media screen and (max-width: 911px) {
     .logoutbutton {
         display: none;
@@ -248,7 +264,7 @@
     text-align: center;
     margin-left: 5%;
     width: 500px;
-    float: left;
+
     margin-bottom: 2%;
     box-shadow: 5px 5px 10px #2e2e2e;
 }

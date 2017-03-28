@@ -2817,6 +2817,16 @@
 			box-shadow: none;
 			color: #ffffff !important;
 		}
+		
+		.button.special_preschool {
+			background: green;
+			text-decoration: none;
+		}
+		
+		.button.special_preschool:active {
+			background: transparent;
+			text-decoration: none;
+		}
 
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
@@ -4043,9 +4053,9 @@
 
 @media screen and (max-width: 736px) {	
 	
-/*.mobilesignin {*/
-/*	display: none;*/
-/*}*/
+.mobilesignin {
+	display: none;
+}
 
 }
 
