@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'static_pages/index'
   get 'static_pages/contact'
   get 'static_pages/logout'
+  get 'static_pages/history'
   resources :subscribers
   resources :delete
   
