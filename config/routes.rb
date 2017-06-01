@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
   get 'static_pages/logout'
   get 'static_pages/history'
+  get 'static_pages/childrensministries'
+  get 'static_pages/specialneedsministries'
+  get 'static_pages/studentministries'
+  get 'static_pages/youngadultministries'
+  get 'static_pages/mensministries'
+  get 'static_pages/55club'
+  get 'static_pages/womensministries'
   resources :subscribers
   resources :delete
   
