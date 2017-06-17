@@ -31,17 +31,15 @@
 								
 								<a href="#">About</a>
 								<ul>
-									<li id="subnav"><a href="#">Staff</a></li>
-									<li id="subnav"><a href="#">Leaders</a></li>
+									<li id="subnav"><%= link_to('Staff & Leaders', static_pages_staff_path) %></li>
 									<li id="subnav"><%= link_to('History', static_pages_history_path) %></li>
-                  <li id="subnav"><a href="#">Bulletin</a></li>
+                  <li id="subnav"><%= link_to('Bulletin', static_pages_wip_path) %></li>
 								</ul>
 							</li>
 							<li>
 								<a href="#">Connect</a>
 								<ul>
 									<li id="subnav"><%= link_to('Contact', static_pages_contact_path) %></li>
-									<li id="subnav"><a href="#">Prayers</a></li>
 								</ul>
 							</li>
               <li>
@@ -59,12 +57,13 @@
                 <li>
 								<a href="#">Events</a>
 								<ul>
-									<li id="subnav"><a href="#">Calendar</a></li>
+									<li id="subnav"><%= link_to('Calender', static_pages_wip_path) %></li>
 									<li id="subnav"><%= link_to('Blog', posts_path) %></li>
 								</ul>
 							</li>
-							<li><a href="#" class="button preschoolbutton">Preschool <i class="fa fa-pencil" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="button special">Give <i class="fa fa-heart" aria-hidden="true"></i></a></li>
+							<li><%= link_to('Preschool', static_pages_preschool_path, class: "button preschoolbutton",)  %></li>
+							<!--<li><a href="#" class="button special">Give <i class="fa fa-heart" aria-hidden="true"></i></a></li>-->
+							
 							<li class="mobilesignin">
 					  		<% if signed_in? && current_user.admin? %>
 					  		<li>|</li>
@@ -114,7 +113,7 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        Are you sure you want to logout?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

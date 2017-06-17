@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get 'static_pages/mensministries'
   get 'static_pages/55club'
   get 'static_pages/womensministries'
+  get 'static_pages/preschool'
+  get 'static_pages/staff'
+  get 'static_pages/wip'
   resources :subscribers
   resources :delete
   

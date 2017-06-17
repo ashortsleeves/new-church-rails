@@ -25,7 +25,7 @@
 									</header>
 								</div>
 								<div class="4u 12u$(medium)">
-									<p>At New Beginnings Assembly of God we’re all about Jesus — and the only way to get to know Jesus is to begin with what he said about himself. That is why we gather every week to pray to Jesus, sing about Jesus, and to hear teaching from the Bible about how God is accomplishing his plan to rescue the world through Jesus. Learn more about our <a href="#">beliefs</a>.</p>
+									<p>At New Beginnings Assembly of God we’re all about Jesus — and the only way to get to know Jesus is to begin with what he said about himself. That is why we gather every week to pray to Jesus, sing about Jesus, and to hear teaching from the Bible about how God is accomplishing his plan to rescue the world through Jesus. Learn more about us <%= link_to('here', static_pages_history_path) %>.</p>
 								</div>
 								<div class="4u$ 12u$(medium)">
                                     <h2>For Kids</h2>
@@ -39,7 +39,7 @@
 
 			<!-- Two -->
 				<section id="two" class="spotlight style2 right">
-					<span class="image fit main"><%= image_tag "church-man-hope.jpg" %></span>
+					<span class="image fit main"><%= image_tag "laptop_bg.png" %></span>
 					<div class="content">
 						<header>
 							<h2>Whats New?</h2>
@@ -47,7 +47,7 @@
 						</header>
 						<p>There are plenty of events and activities here at New Beginnings Assembly of God, Check out our blog to see what were up to!</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><%= link_to('Our Blog', posts_path, class: "button",) %></li>
 						</ul>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
@@ -55,15 +55,15 @@
 
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><%= image_tag "church-man-sea.jpg" %></span>
+					<span class="image fit main bottom"><%= image_tag "CC.png" %></span>
 					<div class="content">
 						<header>
 							<h2>Childrens Church</h2>
 							<p>Let us help your child learn and grow!</p>
 						</header>
-						<p>idk what to put here, help!</p>
+						<p>Sundays at 10:30AM</p>
 						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
+							<li><%= link_to('Learn More', static_pages_childrensministries_path, class: "button",) %></li>
 						</ul>
 					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
@@ -81,66 +81,36 @@
 								<section class="4u 6u(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-globe"></span>
 									<h3>Where are we?</h3>
-									<p>You can find us here: 733 N Sandusky St. Tiffin, OH 44883<br>Or give us a call at: </p>
+									<p>You can find us here: 733 N Sandusky St. Tiffin, OH 44883<br>Or give us a call at: (419) 447-8320</p>
 								</section>
 								<section class="4u 6u$(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-clock-o"></span>
 									<h3>When is Worship?</h3>
-									<p>We worship every sunday at 10:30AM.</p>
+									<p>Sunday School: 9:30am-10:30am
+Worship: 10:30am-12:00am</p>
 								</section>
 								<section class="4u$ 6u(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-lightbulb-o"></span>
-									<h3>What do we belive in?</h3>
-									<p>We belive that the Bible is the only inspired, infallible and authoritative Word of God</p>
+									<h3>What do we believe in?</h3>
+									<p>We belive that the Bible is the only inspired, infallible and authoritative Word of God.</p>
 								</section>
 								<section class="4u 6u$(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-book"></span>
 									<h3>Our Preschool</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<p>New Beginnings Christian Preschool has been established to provide quality, loving care while preparing each child for a successful transition to elementary school.</p>
 								</section>
 								<section class="4u 6u(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-users"></span>
 									<h3>Ministries</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<p>We have ministries for everyone of all ages!</p>
 								</section>
 								<section class="4u$ 6u$(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-rss"></span>
 									<h3>Our Blog</h3>
-									<p>Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit orci porttitor.</p>
+									<p>Find out whats happening around here at New Beginnings and learn whats upcoming!</p>
 								</section>
 							</div>
 						</div>
-						<footer class="major">
-							<ul class="actions">
-								<li><a class="button">Magna sed feugiat</a></li>
-							</ul>
-						</footer>
-					</div>
-				</section>
-
-			<!-- Five -->
-				<section id="five" class="wrapper style2 special fade-up">
-					<div class="container">
-						<header>
-							<h2>Subscribe</h2>
-							<p>Want to see whats new with our Blog?</p>
-						</header>
-						<!--<!--<form method="post" action="#" class="container 50%">-->
-						<!--<!--	<div class="row uniform 50%">-->
-						<!--<!--		<div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>-->
-						<!--<!--		<div class="4u$ 12u$(xsmall)"><input type="submit" value="Subscribe" class="fit special" /></div>-->
-						<!--<!--	</div>-->
-						<!--<!--</form>-->
-						<%= form_for @subscriber, :html => {:class => "container 50%"} do |f| %>
-							<div class="row uniform 50%">
-								<div class="8u 12u$(xsmall)">
-								    <%= f.text_field :email, placeholder: "Email" %>
-								</div>
-								<div class="4u$ 12u$(xsmall)">
-								    <%= f.submit "Subscribe" %>
-								</div>
-							</div>
-						<% end %>
 					</div>
 				</section>
 

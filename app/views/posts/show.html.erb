@@ -9,7 +9,7 @@
   
   <%= link_to 'Back', posts_path,
             :class => "button special backbutton" %>
-  <%= link_to 'Share', "#", :class => "button special sharebutton" %>
+
   <br>
   <% if signed_in? && current_user.admin? %>
           <%= link_to 'Edit', edit_post_path, :class => "button special editbuttonpost" %>
