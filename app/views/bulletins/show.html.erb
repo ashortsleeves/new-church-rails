@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container container-dark">
+<p>
+    <strong>Name:</strong>
+    <%= @bulletin.name %>
+
+  </p>
+      <%= @bulletin.pdf_url.to_s %>
+  
+  <%= link_to 'Edit', edit_bulletin_path(@bulletin) %> |
+  <%= link_to 'Back', bulletins_path %>  
+</div>
