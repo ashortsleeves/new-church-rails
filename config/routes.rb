@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'static_pages/wip'
   resources :subscribers
   resources :delete
+  resources :bulletins
   
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -7,8 +7,11 @@
     <%= @bulletin.name %>
 
   </p>
-      <%= @bulletin.pdf_url.to_s %>
+  <embed src="<%= @bulletin.pdf_url.to_s %>" class="bulletin-pdf" />
   
-  <%= link_to 'Edit', edit_bulletin_path(@bulletin) %> |
+  <% if signed_in? %>
+    <%= link_to 'Edit', edit_bulletin_path(@bulletin) %> |					   
+  <% end %>
+  
   <%= link_to 'Back', bulletins_path %>  
 </div>

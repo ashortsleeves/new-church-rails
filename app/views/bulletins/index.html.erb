@@ -15,15 +15,19 @@
         <tr>
           <td><%= bulletin.name %></td>
           <td><%= link_to 'Show', bulletin %></td>
-          <td><%= link_to 'Edit', edit_bulletin_path(bulletin) %></td>
-          <td><%= link_to 'Destroy', bulletin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if signed_in? %>
+					    <td><%= link_to 'Edit', edit_bulletin_path(bulletin) %></td>
+					    <td><%= link_to 'Destroy', bulletin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
   
   <br>
-  
-  <%= link_to 'New Bulletin', new_bulletin_path %>  
+  <% if signed_in? %>
+					      <%= link_to 'New Bulletin', new_bulletin_path %> 
+					  <% end %>
+ 
 </div>
 
